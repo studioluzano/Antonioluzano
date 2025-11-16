@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Studio Luzano – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Studio Luzano – visual development, illustration & picture books by Antonio Luzano." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <!-- Replace avatar.png with your own image later -->
+      <div class="avatar-wrapper">
+        <img src="images/avatar.png" alt="Portrait of Antonio Luzano" class="avatar">
+      </div>
+
+      <h1 class="site-title">STUDIO LUZANO</h1>
+      <p class="tagline">Visual development · Illustration · Picture books</p>
+
+      <nav class="main-nav">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#koulu">Koulu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Your 4 boxes on the home page -->
+      <section id="portfolio" class="featured-section">
+        <div class="project-grid">
+          <a class="project-card" href="projects/environments.html">
+            <div class="thumb" style="background-image:url('images/environments-thumb.jpg');"></div>
+            <h2>Environments</h2>
+            <p>Worldbuilding for animation, TV & publishing.</p>
+          </a>
+
+          <a class="project-card" href="projects/picture-books.html">
+            <div class="thumb" style="background-image:url('images/picturebooks-thumb.jpg');"></div>
+            <h2>Picture books</h2>
+            <p>Selected spreads, covers & visual storytelling.</p>
+          </a>
+
+          <a class="project-card" href="projects/visdev.html">
+            <div class="thumb" style="background-image:url('images/visdev-thumb.jpg');"></div>
+            <h2>Visual development</h2>
+            <p>Color scripts, keys & exploratory design.</p>
+          </a>
+
+          <a class="project-card" href="projects/personal.html">
+            <div class="thumb" style="background-image:url('images/personal-thumb.jpg');"></div>
+            <h2>Personal work</h2>
+            <p>Explorations, experiments & sketchbook worlds.</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Koulu / classes teaser -->
+      <section id="koulu" class="text-section">
+        <h2>Koulu · Observation drawing classes</h2>
+        <p>
+          I teach small, beginner-friendly drawing classes in Kruununhaka, Helsinki.
+          We focus on seeing clearly, big shapes and relaxed mark-making.
+        </p>
+        <p><strong>Interested?</strong> Email me or send a DM – details below.</p>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="text-section">
+        <h2>About</h2>
+        <p>
+          I’m Antonio Luzano, a visual development artist and illustrator from Montréal,
+          based in Helsinki. I’ve worked on animated TV series, feature productions and
+          children’s books, creating environments, props, colour keys and more.
+        </p>
+        <p>
+          I love building atmospheric worlds, playful cities and quiet, emotional moments.
+        </p>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="text-section">
+        <h2>Contact</h2>
+        <p>
+          For work, collaborations or class enquiries:
+          <br />
+          <a href="mailto:hello@antonioluzano.com">hello@antonioluzano.com</a>
+        </p>
+
+        <div class="social-links">
+          <!-- Replace # with your real links -->
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">Behance</a>
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Studio Luzano. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
