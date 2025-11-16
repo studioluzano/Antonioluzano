@@ -284,12 +284,25 @@ a:hover {
   align-items: center;
 }
 
+.gallery-item {
+  background: #fff;
+  padding: 16px 16px 18px;
+  border: 1px solid #e0ded8;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  min-height: 400px;         
+}
+
 .gallery-item img {
-  width: 100%;
-  display: block;
-  border-radius: 0;   /* no rounding on the image */
-  object-fit: cover;
-  cursor: zoom-in;    /* hint that it enlarges on click */
+  max-width: 90%;
+  max-height: 85%;
+  object-fit: contain;       
+  border-radius: 0;
+  cursor: zoom-in;
+  margin: auto;              
 }
 
 .gallery-item figcaption {
