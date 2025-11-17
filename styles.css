@@ -122,6 +122,50 @@ a:hover {
   border-bottom-color: #8B775A; /* warm brown */
 }
 
+/* Section navigation under name */
+
+.section-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-bottom: 40px;
+}
+
+.section-nav a {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.section-nav a:hover {
+  border-bottom-color: #8B775A; /* warm brown */
+}
+
+/* Project lists inside sections */
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+}
+
+.project-list li {
+  margin-bottom: 4px;
+}
+
+.project-list a {
+  border-bottom: 1px solid transparent;
+}
+
+.project-list a:hover {
+  border-bottom-color: #8B775A;
+}
+
+
 /* Featured projects (the 4 boxes) */
 
 .featured-section {
