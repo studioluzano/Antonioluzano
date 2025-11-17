@@ -31,7 +31,7 @@ a {
 }
 
 a:hover {
-  color: #8B775A;           /* warm brown */
+  color: #8B775A;   /* warm brown */
   text-decoration: underline;
 }
 
@@ -39,7 +39,7 @@ a:hover {
   max-width: 1050px;
   margin: 0 auto;
   padding: 40px 24px 50px;
-  background-color: #F4F2EC; /* keep consistent with body */
+  background-color: #F4F2EC;
 }
 
 /* Header */
@@ -50,7 +50,7 @@ a:hover {
 }
 
 .avatar-wrapper {
-  margin-bottom: 8px; /* closer to name */
+  margin-bottom: 8px;
 }
 
 .avatar {
@@ -65,117 +65,17 @@ a:hover {
 .site-title {
   letter-spacing: 0.15em;
   font-size: 1.3rem;
-  margin-top: 4px;      /* pulls the name a bit closer to the avatar */
+  margin-top: 4px;
   margin-bottom: 4px;
 }
 
 .tagline {
   font-size: 0.88rem;
-  color: #7a8270;  /* slightly lighter moss-grey */
+  color: #7a8270;
   margin-bottom: 26px;
 }
 
-/* Navigation (old top nav if you ever use it) */
-
-.main-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  font-size: 0.95rem;
-  margin-bottom: 24px;
-  flex-wrap: wrap;
-}
-
-.main-nav a {
-  font-family: "Cormorant Garamond", serif;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.78rem;
-  padding-bottom: 4px;
-  border-bottom: 1px solid transparent;
-}
-
-.main-nav a:hover {
-  border-bottom-color: #8B775A; /* warm brown */
-}
-
-/* SECTION NAVIGATION WITH DROPDOWNS UNDER NAME */
-
-.section-nav {
-  margin-top: 16px;
-  margin-bottom: 40px;
-}
-
-.section-nav .menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-item {
-  position: relative;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-}
-
-.menu-item > a {
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-  text-decoration: none;
-}
-
-.menu-item > a:hover {
-  border-bottom-color: #8B775A;   /* warm brown */
-  text-decoration: none;
-}
-
-/* Dropdown */
-
-.dropdown {
-  list-style: none;
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 8px;
-  padding: 8px 14px;
-  background: #F4F2EC;            /* same warm background */
-  border: 1px solid #d9d6cc;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
-  min-width: 220px;
-  z-index: 100;
-}
-
-.dropdown li + li {
-  margin-top: 4px;
-}
-
-.dropdown a {
-  font-size: 0.88rem;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
-  border-bottom: 1px solid transparent;
-  text-decoration: none;
-}
-
-.dropdown a:hover {
-  border-bottom-color: #8B775A;
-  text-decoration: none;
-}
-
-/* Show dropdown on hover (desktop) */
-
-.menu-item:hover .dropdown {
-  display: block;
-}
-
-/* Featured projects (old grid – safe to keep even if unused) */
+/* Project grid */
 
 .featured-section {
   margin-bottom: 40px;
@@ -203,10 +103,14 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border: none !important;
   text-decoration: none;
   transition: transform 0.12s ease, opacity 0.12s ease;
-  border: none !important; /* removes the thin line */
-  box-shadow: none;        /* ensures no shadow leftover */
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
 }
 
 .thumb {
@@ -216,37 +120,24 @@ a:hover {
   background-position: center;
   background-color: #ddd;
   border-radius: 0;
-  margin: 0;
-  display: block;
 }
 
 .project-card h2 {
   margin-top: 6px;
   font-size: 0.92rem;
   font-weight: 500;
-  color: #50584a;    /* softer warm green-grey */
-  letter-spacing: 0.4px;
+  color: #50584a;
 }
 
-.project-card p {
-  font-size: 0.85rem;
-  color: #585858;
-}
-
-/* Text sections */
+/* Text Sections */
 
 .text-section {
-  margin-top: 48px;      /* more space above each section */
-  margin-bottom: 40px;   /* and below */
+  margin-top: 48px;
+  margin-bottom: 40px;
 }
 
 .text-section h2 {
-  margin-top: 12px;
   margin-bottom: 10px;
-}
-
-.text-section p {
-  line-height: 1.7;
 }
 
 /* Social links */
@@ -254,124 +145,18 @@ a:hover {
 .social-links {
   margin-top: 12px;
   display: flex;
-  flex-wrap: wrap;
   gap: 12px;
 }
 
-.social-links a {
-  font-size: 0.9rem;
-  border-bottom: 1px solid transparent;
-}
-
 .social-links a:hover {
-  border-bottom-color: #8B775A; /* warm brown */
+  border-bottom: 1px solid #8B775A;
 }
 
 /* Footer */
 
 .site-footer {
-  margin-top: 60px;       /* more graceful fade-out */
+  margin-top: 60px;
   font-size: 0.75rem;
   color: #9ea88f;
-  letter-spacing: 0.3px;
-}
-
-/* Inner page titles */
-
-.page-title {
-  font-size: 1.6rem;
-  margin-bottom: 6px;
-}
-
-.page-intro {
-  font-size: 0.95rem;
-  color: #555;
-  max-width: 620px;
-  margin: 0 auto 18px;
-}
-
-/* Back link */
-
-.back-row {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 8px;
-}
-
-.back-link {
-  font-size: 0.85rem;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-.back-link:hover {
-  border-bottom-color: #8B775A; /* warm brown */
-}
-
-/* Gallery layout */
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  margin-top: 24px;
-}
-
-@media (max-width: 700px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-}
-
-.gallery-item {
-  background: #FFFDFC;          /* slightly warmer white */
-  padding: 16px 16px 18px;
-  border: 1px solid #9EA88F;    /* soft moss */
-  border-radius: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-}
-
-.gallery-item img {
-  max-width: 90%;
-  max-height: 85%;
-  object-fit: contain;
-  border-radius: 0;
-  cursor: zoom-in;
-  margin: auto;
-}
-
-.gallery-item figcaption {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 10px;
   text-align: center;
-  max-width: 90%;
-}
-
-/* Lightbox overlay */
-
-.lightbox-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.lightbox-overlay.visible {
-  display: flex;
-}
-
-.lightbox-overlay img {
-  max-width: 90vw;
-  max-height: 90vh;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-  cursor: zoom-out;
-  background: #111;
 }
