@@ -52,41 +52,38 @@ a:hover {
 ------------------------------ */
 .site-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 32px;    /* a bit tighter overall */
 }
 
 .avatar-wrapper {
-  margin-bottom: 8px;
-}
-
-.avatar {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #111;
-  background: #fff;
+  margin-bottom: 10px;    /* small gap under avatar */
 }
 
 .site-title {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin: 0 0 6px;        /* logo sits close to avatar */
 }
 
 .name-logo {
   display: block;
   margin: 0 auto;
-  max-width: 320px;   /* adjust if you want it bigger/smaller */
+  max-width: 340px;       /* adjust if you want bigger/smaller */
   width: 100%;
   height: auto;
 }
 
-
 .tagline {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: #7a8270;
-  margin-bottom: 26px;
+  margin-top: 4px;
+  margin-bottom: 18px;    /* pulls nav up a little */
 }
+
+/* adjust nav spacing slightly */
+.section-nav {
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+
 
 /* ------------------------------
    DROPDOWN MENU (Janet Rodriguez style)
