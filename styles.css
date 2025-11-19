@@ -87,7 +87,7 @@ a:hover {
   font-size: 0.9rem;
   color: #7a8270;
   margin-top: 2px;
-  margin-bottom: 10px;        /* pulls nav closer */
+  margin-bottom: 6px;     /* was 10px */
 }
 
 
@@ -97,7 +97,7 @@ a:hover {
 
 .section-nav {
   margin-top: 0;
-  margin-bottom: 22px;     /* nav sits closer to tagline */
+  margin-bottom: 18px;    /* was 22px */
 }
 
 .section-nav .menu {
@@ -165,8 +165,8 @@ a:hover {
 ------------------------------ */
 .hero {
   width: 100%;
-  margin-top: 8px;         /* tiny breathing space under nav */
-  margin-bottom: 56px;     /* more space before “Contact” */
+  margin-top: 14px;       /* a touch more air under the nav */
+  margin-bottom: 56px;
 }
 
 .hero-slider {
