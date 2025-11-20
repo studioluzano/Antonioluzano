@@ -8,20 +8,71 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
 </head>
+
 <body>
   <div class="page">
+
+    <!-- SITE HEADER (same as other pages) -->
     <header class="site-header">
 
-      <div class="back-row">
-      </div>
-      <h1 class="page-title">RUN</h1>
-      <p class="page-intro">
-        Selected spreads and panels from <em>RUN</em>, a graphic novel written by Andrew Katz and created with Bradley Heaven &amp; Daniel O’Connor.
-        Coming 2027
-      </p>
+      <!-- Avatar → back to home -->
+      <a href="../index.html" class="avatar-wrapper">
+        <img src="../images/avatar.png" alt="Portrait of Antonio Luzano" class="avatar">
+      </a>
+
+      <!-- Hand-drawn signature logo → back to home -->
+      <h1 class="site-title">
+        <a href="../index.html">
+          <img src="../images/logo-name.png" alt="Antonio Luzano" class="name-logo">
+        </a>
+      </h1>
+
+      <p class="tagline">Illustrator · Concept Artist</p>
+
+      <!-- Top navigation -->
+      <nav class="section-nav">
+        <ul class="menu">
+
+          <li class="menu-item has-dropdown">
+            <a href="#">Illustration</a>
+            <ul class="dropdown">
+              <li><a href="run.html">RUN – Graphic Novel</a></li>
+              <li><a href="un-peu-de-toi.html">Un peu de toi</a></li>
+              <li><a href="jackies-drawing.html">Jackie’s Drawing</a></li>
+              <li><a href="everyday-walk.html">Everyday Walk</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-item has-dropdown">
+            <a href="#">Concept Art</a>
+            <ul class="dropdown">
+              <li><a href="concept-art.html">NDA Portfolio</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-item">
+            <a href="studio-luzano-koulu.html">Studio Luzano Koulu</a>
+          </li>
+
+          <li class="menu-item">
+            <a href="about.html">About</a>
+          </li>
+
+        </ul>
+      </nav>
     </header>
 
     <main>
+      <!-- RUN intro text -->
+      <section class="run-intro">
+        <h2 class="page-title">RUN</h2>
+        <p class="page-intro">
+          Selected spreads and panels from <em>RUN</em>, a graphic novel written by Andrew Katz and
+          created with Bradley Heaven &amp; Daniel O’Connor. Coming 2027.
+        </p>
+      </section>
+
+      <!-- Gallery -->
       <section class="gallery">
         <figure class="gallery-item">
           <img src="../images/206-207_final.jpeg" alt="RUN graphic novel spread">
@@ -46,7 +97,7 @@
       </section>
     </main>
 
-      <!-- Lightbox overlay -->
+    <!-- Lightbox overlay -->
     <div id="lightbox" class="lightbox-overlay">
       <img src="" alt="">
     </div>
@@ -56,7 +107,7 @@
     </footer>
   </div>
 
-    <script>
+  <script>
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
