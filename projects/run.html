@@ -142,12 +142,12 @@
       }
     ];
 
-    const runImg = document.getElementById('run-slide-img');
-    const runCaption = document.getElementById('run-slide-caption');
-    const prevBtn = document.querySelector('.run-prev');
-    const nextBtn = document.querySelector('.run-next');
+    const runImg      = document.getElementById('run-slide-img');
+    const runCaption  = document.getElementById('run-slide-caption');
+    const prevBtn     = document.querySelector('.run-prev');
+    const nextBtn     = document.querySelector('.run-next');
 
-    const lightbox = document.getElementById('lightbox');
+    const lightbox    = document.getElementById('lightbox');
     const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
     const lightboxPrev = document.querySelector('.lightbox-prev');
     const lightboxNext = document.querySelector('.lightbox-next');
@@ -184,6 +184,7 @@
       }, 200);
     }
 
+    // Button navigation for the inline slider
     if (prevBtn && nextBtn && runSlides.length) {
       prevBtn.addEventListener('click', () => showRunSlide(runIndex - 1));
       nextBtn.addEventListener('click', () => showRunSlide(runIndex + 1));
@@ -226,6 +227,18 @@
         showRunSlide(runIndex + 1);
       });
     }
+
+    // --- Keyboard navigation (no visual changes) ---
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        showRunSlide(runIndex - 1);
+      } else if (e.key === 'ArrowRight') {
+        showRunSlide(runIndex + 1);
+      } else if (e.key === 'Escape' && lightbox && lightbox.classList.contains('visible')) {
+        lightbox.classList.remove('visible');
+        if (lightboxImg) lightboxImg.src = '';
+      }
+    });
   </script>
 </body>
 </html>
