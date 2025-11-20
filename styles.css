@@ -401,6 +401,69 @@ a:hover {
 
 
 /* ------------------------------
+   RUN slider
+------------------------------ */
+.run-slider {
+  margin-top: 28px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.run-frame {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  background: #111;
+  padding: 10px;
+}
+
+.run-frame .run-slide-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: zoom-in;
+}
+
+.run-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #d2cdbd;
+  background: rgba(244, 242, 236, 0.9);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.run-arrow:hover {
+  background: #f4f2ec;
+}
+
+.run-prev {
+  left: 12px;
+}
+
+.run-next {
+  right: 12px;
+}
+
+.run-caption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #555;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ------------------------------
    LIGHTBOX
 ------------------------------ */
 .lightbox-overlay {
