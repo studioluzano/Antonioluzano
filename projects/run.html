@@ -147,6 +147,7 @@
 
     let runIndex = 0;
 
+    // FADE-IN / FADE-OUT VERSION
     function showRunSlide(index) {
       if (!runImg || !runCaption) return;
 
@@ -155,9 +156,19 @@
       runIndex = index;
 
       const slide = runSlides[runIndex];
-      runImg.src = slide.src;
-      runImg.alt = slide.alt;
-      runCaption.textContent = slide.caption;
+
+      // fade out
+      runImg.style.opacity = 0;
+
+      setTimeout(() => {
+        // swap content while faded
+        runImg.src = slide.src;
+        runImg.alt = slide.alt;
+        runCaption.textContent = slide.caption;
+
+        // fade in
+        runImg.style.opacity = 1;
+      }, 200); // short delay that matches your CSS transition nicely
     }
 
     if (prevBtn && nextBtn && runSlides.length) {
