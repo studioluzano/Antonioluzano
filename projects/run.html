@@ -64,32 +64,28 @@
         <h1 class="page-title">RUN</h1>
         <p class="page-intro">
           Selected spreads and panels from <em>RUN</em>, a graphic novel written by Andrew Katz
-          and created with Bradley Heaven &amp; Daniel O’Connor. RUN is an intimate portrait of platonic soulmates Bradley Heaven—who lives with Dyskinetic Cerebral Palsy and is non-verbal—and Daniel O’Connor, his aide, business partner and best friend, as they seek to fulfill a long-time dream: run a marathon together.  Coming 2027.
+          and created with Bradley Heaven &amp; Daniel O’Connor. RUN is an intimate portrait of platonic soulmates Bradley Heaven—who lives with Dyskinetic Cerebral Palsy and is non-verbal—and Daniel O’Connor, his aide, business partner and best friend, as they seek to fulfill a long-time dream: run a marathon together. Coming 2027.
         </p>
       </section>
 
-      <!-- Preview spreads -->
-      <section class="gallery">
-        <figure class="gallery-item">
-          <img src="../images/206-207_final.jpeg" alt="RUN graphic novel spread – crowd and stretcher scene">
-          <figcaption>
-            A key emotional moment: the race, the crowd, and a difficult decision.
-          </figcaption>
-        </figure>
+      <!-- Single-frame slider -->
+      <section class="run-slider">
+        <div class="run-frame">
+          <button class="run-arrow run-prev" aria-label="Previous spread">‹</button>
 
-        <figure class="gallery-item">
-          <img src="../images/run-02.jpg" alt="RUN graphic novel spread 2">
-          <figcaption>
-            Focusing on rhythm and pacing through overlapping action and colour.
-          </figcaption>
-        </figure>
+          <img
+            id="run-slide-img"
+            class="run-slide-img"
+            src="../images/run-01.jpg"
+            alt="RUN graphic novel spread"
+          >
 
-        <figure class="gallery-item">
-          <img src="../images/run-03.jpg" alt="RUN graphic novel spread 3">
-          <figcaption>
-            Quiet beats between the big moments: time, waiting, and inner thoughts.
-          </figcaption>
-        </figure>
+          <button class="run-arrow run-next" aria-label="Next spread">›</button>
+        </div>
+
+        <p id="run-slide-caption" class="run-caption">
+          A key emotional moment: the race, the crowd, and a difficult decision.
+        </p>
       </section>
 
       <!-- External links (Kickstarter / blog) -->
@@ -120,24 +116,72 @@
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Simple lightbox for gallery images
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = lightbox.querySelector('img');
-    const galleryImages = document.querySelectorAll('.gallery-item img');
+    // --- RUN slider setup ---
+    const runSlides = [
+      {
+        src: '../images/run-01.jpg',
+        alt: 'RUN graphic novel spread – crowd and stretcher scene',
+        caption: 'A key emotional moment: the race, the crowd, and a difficult decision.'
+      },
+      {
+        src: '../images/run-02.jpg',
+        alt: 'RUN graphic novel spread – overlapping action',
+        caption: 'Focusing on rhythm and pacing through overlapping action and colour.'
+      },
+      {
+        src: '../images/run-03.jpg',
+        alt: 'RUN graphic novel spread – quiet moment',
+        caption: 'Quiet beats between the big moments: time, waiting, and inner thoughts.'
+      },
+      {
+        src: '../images/run-04.jpg',
+        alt: 'RUN graphic novel spread – fourth preview',
+        caption: 'Another glimpse into the story world of RUN.'
+      }
+    ];
 
-    galleryImages.forEach(img => {
-      img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt || '';
+    const runImg = document.getElementById('run-slide-img');
+    const runCaption = document.getElementById('run-slide-caption');
+    const prevBtn = document.querySelector('.run-prev');
+    const nextBtn = document.querySelector('.run-next');
+
+    let runIndex = 0;
+
+    function showRunSlide(index) {
+      if (!runImg || !runCaption) return;
+
+      if (index < 0) index = runSlides.length - 1;
+      if (index >= runSlides.length) index = 0;
+      runIndex = index;
+
+      const slide = runSlides[runIndex];
+      runImg.src = slide.src;
+      runImg.alt = slide.alt;
+      runCaption.textContent = slide.caption;
+    }
+
+    if (prevBtn && nextBtn && runSlides.length) {
+      prevBtn.addEventListener('click', () => showRunSlide(runIndex - 1));
+      nextBtn.addEventListener('click', () => showRunSlide(runIndex + 1));
+      showRunSlide(0); // initial
+    }
+
+    // --- Lightbox (click to enlarge current slide) ---
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
+
+    if (runImg && lightbox && lightboxImg) {
+      runImg.addEventListener('click', () => {
+        lightboxImg.src = runImg.src;
+        lightboxImg.alt = runImg.alt || '';
         lightbox.classList.add('visible');
       });
-    });
 
-    // Close on click anywhere on the overlay
-    lightbox.addEventListener('click', () => {
-      lightbox.classList.remove('visible');
-      lightboxImg.src = '';
-    });
+      lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('visible');
+        lightboxImg.src = '';
+      });
+    }
   </script>
 </body>
 </html>
