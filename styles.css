@@ -795,3 +795,37 @@ a:hover {
   height: auto;
   transition: opacity 0.25s ease-in-out;
 }
+
+/* ABOUT PAGE SPACING IMPROVEMENTS */
+
+/* More breathing room above and below text sections */
+.text-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 2.5rem;   /* was smaller */
+  padding-bottom: 1.5rem;
+}
+
+/* Reduce the gap between 'About' text and the 'Contact' section */
+.text-section + .text-section {
+  margin-top: -0.5rem; /* pulls Contact section closer */
+}
+
+/* Add more airy spacing before footer */
+.site-footer {
+  margin-top: 3rem;  /* pushes footer down */
+  padding-top: 2rem;
+}
+
+/* Improve readability of paragraphs */
+.text-section p {
+  line-height: 1.55;
+  margin-bottom: 1.1rem;
+}
+
+/* Optional: slightly larger About & Contact headers */
+.text-section h2 {
+  margin-bottom: 0.6rem;
+  font-size: 1.6rem; /* subtle enhancement */
+}
+
