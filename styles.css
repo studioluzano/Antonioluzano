@@ -277,11 +277,6 @@ a:hover {
   gap: 16px;
 }
 
-.run-slide-img {
-  transition: opacity 0.4s ease;
-  opacity: 1;
-}
-
 /* ------------------------------
    SOCIAL LINKS
 ------------------------------ */
@@ -773,4 +768,17 @@ a:hover {
 .koulu-description a:hover {
   border-bottom-color: #8B775A;
   color: #8B775A;
+}
+
+/* ------------------------------
+   RUN SLIDER – Fade Transition
+------------------------------ */
+
+.run-slide-img {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.run-slide-img.fade-out {
+  opacity: 0;
 }
