@@ -846,3 +846,26 @@ a:hover {
 .hero {
   background-color: #F4F2EC;  /* same as the body background */
 }
+
+/* Make hero container match page background */
+.hero {
+  background-color: #F4F2EC; /* same as body background */
+}
+
+/* Remove any black background from the slider */
+.hero-slider {
+  background-color: #F4F2EC; /* remove the dark fill */
+}
+
+/* Make sure the slides themselves don’t introduce black edges */
+.hero-slide {
+  background-color: #F4F2EC;
+  object-fit: contain; /* keeps aspect ratio */
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.hero-slide.active {
+  display: block;
+}
