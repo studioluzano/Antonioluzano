@@ -836,3 +836,13 @@ a:hover {
   margin-bottom: 0.6rem;
   font-size: 1.6rem;
 }
+
+/* Hero background tweaks */
+.hero-slider {
+  background-color: transparent;  /* or just remove background-color */
+}
+
+/* If .hero itself also has a dark background, override that too */
+.hero {
+  background-color: #F4F2EC;  /* same as the body background */
+}
